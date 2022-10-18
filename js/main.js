@@ -1,7 +1,3 @@
-let co = function (co) {
-    console.log(co)
-}
-
     let gameBoard = document.querySelectorAll(".game div")
     let playerTurnEl = document.getElementById("turn")
     let resutlts = document.getElementById("result")
@@ -100,7 +96,6 @@ let co = function (co) {
                 setTimeout( function ( ) { alert( "Player One Wins!!" ); }, 500 );
                 gameOver = true;
                 setTimeout( function ( ) { location. reload() ; }, 500 );
-                // location. reload()
             }
             else if (
                 squarOne.classList.contains("yellow") &&
@@ -112,13 +107,11 @@ let co = function (co) {
                 setTimeout( function ( ) { alert( "Player Two Wins!!" ); }, 500 );
                 gameOver = true;
                 setTimeout( function ( ) { location. reload(); }, 500 );
-                // location. reload()
             } else {
+                
             }
         }
 }
-
-
 
         gameBoard.forEach(e => e.addEventListener("click", (el) => {
             // Just to know the number of the box
@@ -128,7 +121,6 @@ let co = function (co) {
             } else {
                 if(el.target.classList.contains("full") || !gameBoard[arr + 7].classList.contains("full")) {
                 alert("You can't go here!!");
-                // setTimeout( function ( ) { alert( "You can't go here!!" ); }, 1000 );
                 } else {
                 el.target.classList.add("full")
                 el.target.classList.add(userTurn ? "red" : "yellow")
